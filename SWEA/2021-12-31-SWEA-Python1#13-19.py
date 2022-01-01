@@ -96,6 +96,19 @@ else:
     print(alpha)
 
 
+# 연습문제 5-C
+alpha = input()
+
+if 'a' <= alpha <= 'z':     # alpha가 소문자일 경우
+    print("{0}(ASCII: {1}) => {2}(ASCII: {3})".format(
+        alpha, ord(alpha), alpha.upper(), ord(alpha.upper())))
+elif 'A' <= alpha <= 'Z':  # alpha가 대문자일 경우
+    print("{0}(ASCII: {1}) => {2}(ASCII: {3})".format(
+        alpha, ord(alpha), alpha.lower(), ord(alpha.lower())))
+else:   # alpha가 소문자/대문자 가 아닌 경우
+    print(alpha)
+
+
 # 연습문제 7
 result = ""
 
