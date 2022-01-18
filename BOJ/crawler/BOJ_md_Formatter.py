@@ -81,7 +81,7 @@ problem_tier = problem_level_tier_dict[problem_level_tier]
 
 # 3.6. 입력
 txt = f"""---
-title: "[BOJ][#{problem_num}][{problem_class}{problem_tier}]{problem_title}"
+title: "[BOJ][백준 #{problem_num}][{problem_class}{problem_tier}]{problem_title}"
 excerpt: "BAEKJOON Online Judge 문제 풀이"
 
 categories:
