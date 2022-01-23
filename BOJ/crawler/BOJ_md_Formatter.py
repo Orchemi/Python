@@ -85,7 +85,7 @@ title: "[BOJ][{problem_class}{problem_tier}][백준#{problem_num}] {problem_titl
 excerpt: "BAEKJOON Online Judge 문제 풀이"
 
 categories:
-  - BOJ
+  - BOJ {problem_level_class}
 
 tags:
   - [BOJ, ProblemSolving, Python, {problem_level_class}]
