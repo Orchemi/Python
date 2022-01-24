@@ -258,16 +258,14 @@ for i in range(0, len(sampledata_list_input)):
 입력
 
 ```python
-{sampledata_list_input[i]}
-```
+{sampledata_list_input[i]}```
 
 <br>
 
 출력
 
 ```python
-{sampledata_list_output[i]}
-```
+{sampledata_list_output[i]}```
 
 <br>
 
