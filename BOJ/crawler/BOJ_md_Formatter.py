@@ -157,20 +157,24 @@ result = f"{result}\n{txt}"
 #####################################################
 # 7. 입력
 # 7.1. 입력 추출
-problem_input = data.select_one('#problem_input').text
+try:
+    problem_input = data.select_one('#problem_input').text
 
-if problem_input == "":
-    problem_input == "없음"
+except AttributeError:
+    problem_input = ""
 
+else:
+    if problem_input == "":
+        problem_input == "없음"
 
-# 7.2. 입력
-txt = f"""
-## 입력
+    # 7.2. 입력
+    txt = f"""
+    ## 입력
 
-{problem_input}
+    {problem_input}
 
-<br>
-"""
+    <br>
+    """
 
 
 # 7.3. result에 붙이기
@@ -179,7 +183,11 @@ result = f"{result}\n{txt}"
 #####################################################
 # 8. 출력
 # 8.1. 출력 추출
-problem_output = data.select_one('#problem_output').text
+try:
+    problem_output = data.select_one('#problem_output').text
+
+except AttributeError:
+    problem_output = ""
 
 if problem_output == "":
     problem_output == "없음"
