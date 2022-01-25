@@ -161,7 +161,7 @@ try:
     problem_input = data.select_one('#problem_input').text
 
 except AttributeError:
-    problem_input = ""
+    problem_input = "없음"
 
 else:
     if problem_input == "":
@@ -169,12 +169,12 @@ else:
 
     # 7.2. 입력
     txt = f"""
-    ## 입력
+## 입력
 
-    {problem_input}
+{problem_input}
 
-    <br>
-    """
+<br>
+"""
 
 
 # 7.3. result에 붙이기
@@ -187,10 +187,11 @@ try:
     problem_output = data.select_one('#problem_output').text
 
 except AttributeError:
-    problem_output = ""
+    problem_output = "없음"
 
-if problem_output == "":
-    problem_output == "없음"
+else:
+    if problem_output == "":
+        problem_output == "없음"
 
 # 8.2. 입력
 txt = f"""
@@ -246,21 +247,24 @@ for cnt in range(0, 20):
 
 
 # 10.2. 예제 분리
-# input 데이터 리스트 저장
-sampledata_list_input = [
-    item for item in sampledata_list if sampledata_list.index(item) % 2 == 0]
+# input / output 데이터 리스트 저장
+sampledata_list_input = []
+sampledata_list_output = []
 
-# output 데이터 리스트 저장
-sampledata_list_output = [
-    item for item in sampledata_list if sampledata_list.index(item) % 2 == 1]
+while sampledata_list != []:
+    in_ex = sampledata_list.pop(0)
+    sampledata_list_input.append(in_ex)
+
+    out_ex = sampledata_list.pop(0)
+    sampledata_list_output.append(out_ex)
 
 
 # 10.3. 예제 이어붙이기
 sampletxt = ""
 
-for i in range(0, len(sampledata_list_input)):
+for i in range(0, len(sampledata_list_input)-2):
     if sampledata_list_input[i] == "":
-        sampledata_list_input[i] = "없음"
+        sampledata_list_input[i] = "없음\n"
 
     inout_ex = f"""
 입력
