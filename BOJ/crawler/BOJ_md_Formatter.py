@@ -262,7 +262,7 @@ while sampledata_list != []:
 # 10.3. 예제 이어붙이기
 sampletxt = ""
 
-for i in range(0, len(sampledata_list_input)-2):
+for i in range(0, len(sampledata_list_input)):
     if sampledata_list_input[i] == "":
         sampledata_list_input[i] = "없음\n"
 
