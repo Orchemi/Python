@@ -85,10 +85,10 @@ title: "[BOJ][{problem_class}{problem_tier}][백준#{problem_num}] {problem_titl
 excerpt: "BAEKJOON Online Judge 문제 풀이"
 
 categories:
-  - BOJ {problem_level_class}
+  - BOJ {problem_level_class} {problem_level_tier}
 
 tags:
-  - [BOJ, ProblemSolving, Python, {problem_level_class}]
+  - [BOJ, BOJ {problem_level_class}, PS, Python]
 """
 
 # 3.7. result에 붙이기
