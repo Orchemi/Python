@@ -17,9 +17,8 @@ txt = ""
 input_problem_num = input("문제 번호 입력 : ")
 url = f"https://www.acmicpc.net/problem/{input_problem_num}"
 
-
 # 3.2. requests pip 사용
-response = requests.get(url).text
+response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'}).text
 data = BeautifulSoup(response, 'html.parser')
 
 
