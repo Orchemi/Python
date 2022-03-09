@@ -132,7 +132,7 @@ txt = f"""
 <br>
 """
 
-result = f"{result}\n{txt}"
+result = f"{result}{txt}"
 
 #####################################################
 # 6. 문제
@@ -143,15 +143,13 @@ problem_description = data.select_one('#problem_description').text
 # 6.2. 입력
 txt = f"""
 ## 문제
-
 {problem_description}
-
 <br>
 """
 
 
 # 6.3. result에 붙이기
-result = f"{result}\n{txt}"
+result = f"{result}{txt}"
 
 #####################################################
 # 7. 입력
@@ -169,15 +167,13 @@ else:
     # 7.2. 입력
     txt = f"""
 ## 입력
-
 {problem_input}
-
 <br>
 """
 
 
 # 7.3. result에 붙이기
-result = f"{result}\n{txt}"
+result = f"{result}{txt}"
 
 #####################################################
 # 8. 출력
@@ -195,15 +191,13 @@ else:
 # 8.2. 입력
 txt = f"""
 ## 출력
-
 {problem_output}
-
 <br>
 """
 
 
 # 8.3. result에 붙이기
-result = f"{result}\n{txt}"
+result = f"{result}{txt}"
 
 #####################################################
 # 9. 제한
@@ -218,9 +212,7 @@ else:
     txt = f"""
 
 ## 제한
-
 {problem_limit}
-
 <br>
 """
 
@@ -278,9 +270,7 @@ for i in range(0, len(sampledata_list_input)):
 ```python
 {sampledata_list_output[i]}```
 
-<br>
-
-"""
+<br>"""
 
     if len(sampledata_list_input) == 1:
         a = f"""
@@ -290,7 +280,6 @@ for i in range(0, len(sampledata_list_input)):
     else:
         a = f"""
 ### 예제 {i + 1}
-
 {inout_ex}
 """
 
@@ -304,13 +293,12 @@ txt = f"""
 """
 
 # 10.5. result에 붙이기
-result = f"{result}\n{txt}"
+result = f"{result}{txt}"
 
 #####################################################
 # 11. etc
 # 11.1. 나머지 문자 입력
-txt = """
-## My Sol
+txt = """## My Sol
 
 ```python
 # empty
@@ -334,7 +322,7 @@ txt = """
 """
 
 # 11.2. result에 붙이기
-result = f"{result}\n{txt}"
+result = f"{result}{txt}"
 
 #####################################################
 # 12. result를 클립보드에 copy
